@@ -51,39 +51,40 @@ export function Specialties() {
   return (
     <section id="especialidades" className="bg-mint/60 py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
-          <div className="lg:sticky lg:top-28 lg:self-start">
-            <h2 className="font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-              Cuidado completo, do canal ao sorriso
-            </h2>
-            <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">
-              Três especializações reunidas em um só consultório — para que o seu tratamento
-              tenha começo, meio e fim com a mesma profissional de confiança.
-            </p>
-          </div>
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+            Cuidado completo, do canal ao sorriso
+          </h2>
+          <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">
+            Três especializações reunidas em um só consultório — para que o seu tratamento
+            tenha começo, meio e fim com a mesma profissional de confiança.
+          </p>
+        </div>
 
-          <div className="divide-y divide-border">
-            {SPECIALTIES.map(({ icon: Icon, title, description, featured }) => (
-              <div key={title} className="flex flex-col gap-3 py-7 first:pt-0 sm:flex-row sm:gap-8">
-                <div className="flex items-center gap-4 sm:w-56 sm:shrink-0">
-                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-brand-deep">
-                    <Icon className="h-5 w-5" strokeWidth={1.75} />
-                  </div>
-                  <h3 className="font-heading text-xl font-bold text-foreground">{title}</h3>
-                </div>
-                <div className="sm:flex-1">
-                  <p className="text-[15px] leading-relaxed text-muted-foreground">
-                    {description}
-                  </p>
-                  {featured && (
-                    <span className="mt-3 inline-block rounded-full bg-white px-2.5 py-1 text-[10.5px] font-bold tracking-wide text-brand-deep uppercase">
-                      Especialização
-                    </span>
-                  )}
-                </div>
+        <h3 className="mt-16 text-center font-heading text-xl font-bold text-foreground">
+          Especializações
+        </h3>
+
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {SPECIALTIES.map(({ icon: Icon, title, description, featured }) => (
+            <div
+              key={title}
+              className="relative flex flex-col rounded-2xl border border-black/[0.06] bg-white p-7 transition-shadow hover:shadow-lg"
+            >
+              {featured && (
+                <span className="absolute top-7 right-7 rounded-full bg-mint px-2.5 py-1 text-[10.5px] font-bold tracking-wide text-brand-deep uppercase">
+                  Especialização
+                </span>
+              )}
+              <div className="grid h-12 w-12 place-items-center rounded-xl bg-mint text-brand-deep">
+                <Icon className="h-6 w-6" strokeWidth={1.75} />
               </div>
-            ))}
-          </div>
+              <h4 className="mt-6 font-heading text-lg font-bold text-foreground">{title}</h4>
+              <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">
+                {description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

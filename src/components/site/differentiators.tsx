@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { ShieldCheck, Clock, Sparkles, HeartHandshake } from "lucide-react";
-import { LogoIcon } from "./logo-mark";
 
 const ITEMS = [
   {
@@ -32,17 +31,15 @@ const ITEMS = [
 export function Differentiators() {
   return (
     <section id="diferenciais" className="relative overflow-hidden bg-graphite py-24 sm:py-28">
-      <LogoIcon className="pointer-events-none absolute -top-12 -right-12 h-72 w-72 text-white/[0.04]" />
-
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[38%] [mask-image:linear-gradient(to_right,transparent,black_35%)] xl:block">
-        <Image
-          src="/images/luciana-capa-marca.jpg"
-          alt=""
-          fill
-          sizes="38vw"
-          className="object-cover object-[78%_center] opacity-90"
-        />
-      </div>
+      <Image
+        src="/images/luciana-retrato.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover object-[72%_22%] opacity-90"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-graphite via-graphite/85 to-graphite/25" />
+      <div className="absolute inset-0 bg-gradient-to-t from-graphite via-transparent to-transparent" />
 
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="max-w-xl">
@@ -51,15 +48,15 @@ export function Differentiators() {
           </h2>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2">
+        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:max-w-2xl">
           {ITEMS.map(({ icon: Icon, title, description }) => (
             <div key={title} className="flex gap-4">
-              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-white/[0.06] text-brand">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-white/[0.08] text-brand backdrop-blur-sm">
                 <Icon className="h-6 w-6" strokeWidth={1.75} />
               </div>
               <div>
                 <h3 className="font-heading text-[17px] font-bold text-white">{title}</h3>
-                <p className="mt-1.5 text-[14.5px] leading-relaxed text-white/65">
+                <p className="mt-1.5 text-[14.5px] leading-relaxed text-white/70">
                   {description}
                 </p>
               </div>

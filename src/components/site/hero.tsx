@@ -66,22 +66,6 @@ export function Hero() {
                 <ArrowDownRight className="h-4 w-4" />
               </a>
             </div>
-
-            <div className="mt-11 flex items-center gap-2 border-t border-border pt-6 text-[14px] text-muted-foreground sm:max-w-md">
-              <span className="inline-flex items-center gap-1 font-heading font-bold text-foreground">
-                5,0
-                <Star className="h-3.5 w-3.5 fill-brand text-brand" />
-              </span>
-              <span>avaliação real no</span>
-              <a
-                href={MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-brand-deep underline underline-offset-4 hover:text-[#0f5a3f]"
-              >
-                Google Maps
-              </a>
-            </div>
           </motion.div>
 
           <motion.div
@@ -109,6 +93,27 @@ export function Hero() {
                 Endodontia · Ortodontia · Implantodontia
               </p>
             </div>
+
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute -top-5 -right-4 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-xl transition-transform hover:-translate-y-0.5 sm:-right-8"
+            >
+              <div className="flex items-center gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-brand text-brand" />
+                ))}
+              </div>
+              <div className="border-l border-border pl-3">
+                <p className="font-heading text-lg leading-none font-extrabold text-foreground">
+                  5,0
+                </p>
+                <p className="text-[11.5px] leading-tight text-muted-foreground">
+                  avaliação no Google
+                </p>
+              </div>
+            </a>
           </motion.div>
         </div>
       </section>

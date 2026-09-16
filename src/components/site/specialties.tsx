@@ -49,19 +49,19 @@ const SPECIALTIES: Specialty[] = [
 
 export function Specialties() {
   return (
-    <section id="especialidades" className="bg-mint/60 py-24 sm:py-28">
+    <section id="especialidades" className="bg-graphite py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Cuidado completo, do canal ao sorriso
           </h2>
-          <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">
+          <p className="mt-4 text-[16px] leading-relaxed text-white/65">
             Três especializações reunidas em um só consultório — para que o seu tratamento
             tenha começo, meio e fim com a mesma profissional de confiança.
           </p>
         </div>
 
-        <h3 className="mt-16 text-center font-heading text-xl font-bold text-foreground">
+        <h3 className="mt-16 text-center font-heading text-xl font-bold text-white">
           Especializações
         </h3>
 
@@ -69,20 +69,18 @@ export function Specialties() {
           {SPECIALTIES.map(({ icon: Icon, title, description, featured }) => (
             <div
               key={title}
-              className="relative flex flex-col rounded-2xl border border-black/[0.06] bg-white p-7 transition-shadow hover:shadow-lg"
+              className="group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:bg-white/[0.07] hover:shadow-xl hover:shadow-black/30"
             >
               {featured && (
-                <span className="absolute top-7 right-7 rounded-full bg-mint px-2.5 py-1 text-[10.5px] font-bold tracking-wide text-brand-deep uppercase">
+                <span className="absolute top-7 right-7 rounded-full bg-brand/15 px-2.5 py-1 text-[10.5px] font-bold tracking-wide text-brand-light uppercase">
                   Especialização
                 </span>
               )}
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-mint text-brand-deep">
+              <div className="grid h-12 w-12 place-items-center rounded-xl bg-white/[0.08] text-brand transition-transform duration-300 group-hover:scale-110 group-hover:bg-brand/15">
                 <Icon className="h-6 w-6" strokeWidth={1.75} />
               </div>
-              <h4 className="mt-6 font-heading text-lg font-bold text-foreground">{title}</h4>
-              <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">
-                {description}
-              </p>
+              <h4 className="mt-6 font-heading text-lg font-bold text-white">{title}</h4>
+              <p className="mt-2 text-[14.5px] leading-relaxed text-white/65">{description}</p>
             </div>
           ))}
         </div>

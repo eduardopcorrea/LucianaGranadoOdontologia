@@ -51,63 +51,39 @@ export function Specialties() {
   return (
     <section id="especialidades" className="bg-mint/60 py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="max-w-xl">
-          <span className="text-[13px] font-semibold tracking-[0.14em] text-brand-deep uppercase">
-            Especialidades
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-            Cuidado completo, do canal ao sorriso
-          </h2>
-          <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">
-            Três especializações reunidas em um só consultório — para que o seu tratamento
-            tenha começo, meio e fim com a mesma profissional de confiança.
-          </p>
-        </div>
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
+          <div className="lg:sticky lg:top-28 lg:self-start">
+            <h2 className="font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+              Cuidado completo, do canal ao sorriso
+            </h2>
+            <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">
+              Três especializações reunidas em um só consultório — para que o seu tratamento
+              tenha começo, meio e fim com a mesma profissional de confiança.
+            </p>
+          </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {SPECIALTIES.map(({ icon: Icon, title, description, featured }) => (
-            <div
-              key={title}
-              className={
-                featured
-                  ? "group relative overflow-hidden rounded-3xl bg-graphite p-7"
-                  : "group relative overflow-hidden rounded-3xl border border-black/[0.06] bg-white p-7"
-              }
-            >
-              <div
-                className={
-                  featured
-                    ? "grid h-12 w-12 place-items-center rounded-2xl bg-white/10 text-brand"
-                    : "grid h-12 w-12 place-items-center rounded-2xl bg-mint text-brand-deep"
-                }
-              >
-                <Icon className="h-6 w-6" strokeWidth={1.75} />
+          <div className="divide-y divide-border">
+            {SPECIALTIES.map(({ icon: Icon, title, description, featured }) => (
+              <div key={title} className="flex flex-col gap-3 py-7 first:pt-0 sm:flex-row sm:gap-8">
+                <div className="flex items-center gap-4 sm:w-56 sm:shrink-0">
+                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-brand-deep">
+                    <Icon className="h-5 w-5" strokeWidth={1.75} />
+                  </div>
+                  <h3 className="font-heading text-xl font-bold text-foreground">{title}</h3>
+                </div>
+                <div className="sm:flex-1">
+                  <p className="text-[15px] leading-relaxed text-muted-foreground">
+                    {description}
+                  </p>
+                  {featured && (
+                    <span className="mt-3 inline-block rounded-full bg-white px-2.5 py-1 text-[10.5px] font-bold tracking-wide text-brand-deep uppercase">
+                      Especialização
+                    </span>
+                  )}
+                </div>
               </div>
-              <h3
-                className={
-                  featured
-                    ? "mt-6 font-heading text-lg font-bold text-white"
-                    : "mt-6 font-heading text-lg font-bold text-foreground"
-                }
-              >
-                {title}
-              </h3>
-              <p
-                className={
-                  featured
-                    ? "mt-2 text-[14.5px] leading-relaxed text-white/70"
-                    : "mt-2 text-[14.5px] leading-relaxed text-muted-foreground"
-                }
-              >
-                {description}
-              </p>
-              {featured && (
-                <span className="absolute top-7 right-7 rounded-full bg-brand/15 px-2.5 py-1 text-[10.5px] font-bold tracking-wide text-brand uppercase">
-                  Especialização
-                </span>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

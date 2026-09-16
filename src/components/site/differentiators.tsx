@@ -46,10 +46,7 @@ export function Differentiators() {
 
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="max-w-xl">
-          <span className="text-[13px] font-semibold tracking-[0.14em] text-brand uppercase">
-            Por que escolher
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Cuidado que se sente na primeira consulta
           </h2>
         </div>

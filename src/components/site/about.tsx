@@ -13,7 +13,7 @@ export function About() {
     <section id="sobre" className="bg-background py-24 sm:py-28">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div className="relative">
-          <div className="relative aspect-[5/4] w-full overflow-hidden rounded-[2rem]">
+          <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl">
             <Image
               src="/images/consultorio.jpg"
               alt="Consultório da Dra. Luciana Granado em Vila Velha"
@@ -23,7 +23,7 @@ export function About() {
             />
           </div>
 
-          <div className="absolute -bottom-8 -right-4 flex items-center gap-3 rounded-2xl border border-border bg-white p-3 pr-5 shadow-xl sm:-right-8">
+          <div className="absolute -bottom-8 -right-4 flex items-center gap-3 rounded-2xl bg-white p-3 pr-5 shadow-xl sm:-right-8">
             <div className="relative h-14 w-14 overflow-hidden rounded-xl bg-graphite shrink-0">
               <Image
                 src="/images/luciana-retrato.jpg"
@@ -41,10 +41,7 @@ export function About() {
         </div>
 
         <div>
-          <span className="text-[13px] font-semibold tracking-[0.14em] text-brand-deep uppercase">
-            Sobre a Dra. Luciana Granado
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
             Um novo conceito em odontologia
           </h2>
           <p className="mt-5 text-[16px] leading-relaxed text-muted-foreground">

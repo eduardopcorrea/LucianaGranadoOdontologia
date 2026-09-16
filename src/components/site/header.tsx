@@ -50,7 +50,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[14.5px] font-medium text-white/75 transition-colors hover:text-brand"
+                className="text-[14.5px] font-medium text-white/75 transition-colors hover:text-brand-light"
               >
                 {link.label}
               </a>
@@ -62,7 +62,7 @@ export function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[14px] font-semibold text-white shadow-sm transition-colors hover:bg-[#268f3f]"
+              className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[14px] font-semibold text-foreground shadow-sm transition-colors hover:bg-brand-light"
             >
               <MessageCircle className="h-4 w-4" />
               Agendar consulta
@@ -100,7 +100,7 @@ export function Header() {
             key={link.href}
             href={link.href}
             onClick={() => setOpen(false)}
-            className="rounded-lg px-3 py-3 text-[16px] font-medium text-white/85 hover:bg-white/[0.08] hover:text-brand"
+            className="rounded-lg px-3 py-3 text-[16px] font-medium text-white/85 hover:bg-white/[0.08] hover:text-brand-light"
           >
             {link.label}
           </a>
@@ -110,7 +110,7 @@ export function Header() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setOpen(false)}
-          className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 text-[15px] font-semibold text-white"
+          className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 text-[15px] font-semibold text-foreground"
         >
           <MessageCircle className="h-4 w-4" />
           Agendar pelo WhatsApp

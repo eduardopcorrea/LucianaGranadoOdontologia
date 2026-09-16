@@ -54,7 +54,7 @@ export function LogoMark({
         <span
           className={cn(
             "text-[10.5px] font-medium tracking-[0.14em] uppercase",
-            tone === "light" ? "text-brand-deep" : "text-brand",
+            tone === "light" ? "text-brand-deep" : "text-brand-light",
           )}
         >
           Odontologia Integrada

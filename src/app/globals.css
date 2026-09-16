@@ -10,6 +10,7 @@
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
   --color-brand: var(--brand);
+  --color-brand-light: var(--brand-light);
   --color-brand-deep: var(--brand-deep);
   --color-brand-foreground: var(--brand-foreground);
   --color-mint: var(--mint);
@@ -75,6 +76,9 @@
 
   /* Brand tokens, sampled from the client's real photo/logo (Facebook/Instagram) */
   --brand: #2fa84a;
+  /* Lighter step of --brand: passes 4.5:1 as text/hover-fill on --graphite, where
+     --brand itself only reaches ~4:1 (fine for icons, not for small text). */
+  --brand-light: #3dbb59;
   --brand-deep: #146b4c;
   --brand-foreground: #ffffff;
   --mint: #f1f8f3;
@@ -139,5 +143,13 @@
   }
   html {
     @apply font-sans;
+  }
+  ::selection {
+    background-color: var(--brand);
+    color: #ffffff;
+  }
+  :focus-visible {
+    outline: 2px solid var(--brand-deep);
+    outline-offset: 2px;
   }
 }
